@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # ログ出力についての記述方法まとめ
 
 print("Hello, Ruby.\n")
