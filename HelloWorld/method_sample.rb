@@ -4,5 +4,3 @@
 def hello
   p "Hello, Ruby"
 end
-
-hello
