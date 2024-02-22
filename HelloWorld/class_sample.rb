@@ -11,6 +11,21 @@ class HelloWorld
   def hello
     p "Hello, World, " + @name
   end
+
+  # クラスメソッドの書き方３パターン
+  def HelloWorld.hello1
+    p "クラスメソッドの呼び出し１"
+  end
+  class << HelloWorld
+    def hello2
+      p "クラスメソッドの呼び出し2"
+    end
+  end
+
+  def self.hello3
+    p "クラスメソッドの呼び出し3"
+  end
+
 end
 
 bob = HelloWorld.new("Bob")
@@ -24,4 +39,9 @@ end
 [bob, alice, ruby].each do |i|
   p i.name
 end
+
+# クラスメソッドの呼び出し
+HelloWorld.hello1
+HelloWorld.hello2
+HelloWorld.hello3
 
