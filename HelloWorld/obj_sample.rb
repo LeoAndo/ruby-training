@@ -11,3 +11,7 @@ p ary.equal?(ary2) # false
 
 # オブジェクトの同値性の比較
 p ary.eql?(ary2) # true
+
+# 型チェック
+p ary.instance_of? String # false
+p ary.instance_of? Array # true
