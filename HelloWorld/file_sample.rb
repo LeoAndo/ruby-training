@@ -7,3 +7,18 @@ begin
 rescue Errno::ENOENT
   p "error: " + $!.message
 end
+
+# ディレクトリ操作
+# /usr/binは以下のファイルを表示する.
+begin
+  dir = Dir.open("/usr/bin")
+  dir.each do |name|
+    p name
+  end
+
+rescue Errno::ENOENT
+  p "error: " + $!.message
+
+ensure
+  dir.close
+end
